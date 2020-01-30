@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Poppins:500&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+	max-width: 100%;
+}
+
+body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #153243;
+  }
+
+a {
+	text-decoration: none;
+}
+
+
+.wrapper {
+display: flex;
+    overflow: auto;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  background-color: #d0a3bf;
+  }
+
+/* JS Nav */
+
+
+.sidenav { 
+  background: #d0a3bf;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  position: fixed;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 0 25%;
+  width: 50%;
+}
+
+.links li { margin-top: 30px; }
+
+.links li a {
+  position: relative;
+  display: block;
+  color: #153243;
+  font-size: 3.5vmin;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 25px 8px 25px 25px;
+  transition: 0.3s;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin: 0 auto;
+  
+}
+
+.links li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: -5px;
+  width: 0;
+  height: 4px;
+  background-color: #153243;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+.links li a:hover:after { width: 70%; }
+
+.links li a:active { color: #dbdbdb; }
+
+.sidenav-left { left: -300px; }
+
+.sidenav-left.sidenav-open { left: 0; }
+
+.sidenav-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.sidenav-push-toright { left: 300px; }
+
+/*Transition*/
+
+.sidenav, .sidenav-push {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+.hamburgermenu {
+	display: flex;
+	flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+	font-size: 35px;
+	padding: 1.75vmin;
+	color: #f4f9e9;
+	background-color: #153243;
+	position: sticky;
+	top: 0;
+	z-index: +1;
+}
+#famenu {
+	align-self: flex-start;
+}
+
+.hamburgermenu.active { background-position: -331px top; }
+
+.buttonset {
+  background: #153243;
+  height: 16px;
+}
+
+/* End JS Nav */
+
+/* Mobile Top Nav */
+
+#top-nav {
+    display: none;
+}
+
+.top-nav ul {
+    display: none;
+}
+
+/* End Mobile Top Nav */
+
+/* About Page Top Nav */
+
+.top-nav-other {
+    background: #153243;
+    width: 100%;
+    text-align: center; 
+    align-content: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.top-nav-other a {
+    margin: 25px 50px 25px 50px;
+    text-decoration: none;
+    color: #f4f9e9;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* End About Page Top Nav */
+
+/* Main Section Styling */
+
+.parallax {
+    min-height: 90vh;
+	background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+}
+
+.parallax h1 {
+    padding-top: 6vh;
+	top: 6vh;
+	left: 5%;
+    position: absolute;
+    font-size: 6vh;
+}
+
+
+.main-index {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+
+}
+   
+section.content {
+  padding: 10px 20px;
+    height: auto;
+  font-family: 'Playfair Display', serif;
+  width: 100%;
+  text-align: left;
+  color: #d0a3bf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../Images/CopyCopyCopyCanvaJewelerFlip.jpg');
+}
+
+/* About Page */
+
+.about-content {
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    background: #d0a3bf;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.about-header {
+	width: 100%;
+	text-align: center;
+	color: #f4f9e9;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    
+}
+
+.header-wrapper {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f4f9e9;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #153243;
+    width: 90%;
+    border: 1px solid #f4f9e9;
+    border-radius: .5rem;
+    overflow: auto;
+}
+
+.about-images {
+    display: flex;
+	flex-direction: row;
+}
+
+.about-image-one {
+	margin: 0 auto;
+    width: 30%;
+    padding-top: 10px;
+	
+}
+
+.about-image-two {
+	margin: 0 auto;
+	padding-top: 10px;
+	width: 30%;
+	
+}
+
+.about-image-three {
+	margin: 0 auto;
+	padding-top: 10px;
+	width: 30%;
+	
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+/* End About Page */
+
+/* Gallery Start */
+
+section.gallerypg {
+    padding: 10px 20px;
+      height: auto;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    text-align: left;
+    color: #d0a3bf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background-image: url('../Images/anniesprattunsplashhorizon.jpg');
+    
+    
+  }
+  
+
+
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+
+  .mySlides {
+    display: none;
+  }
+  
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #d0a3bf;
+    font-weight: bold;
+    font-size: 60px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+   .text {
+    color: #153243;
+    font-size: 25px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+  }
+  
+  .numbertext {
+    color: #153243;
+    padding: 8px 12px;
+    font-size: 25px;
+    
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+  }
+  
+  .activity, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/* End Gallery  */
+
+/* Contact Start */
+
+section.contactpg {
+    padding: 10px 20px;
+      height: auto;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background-image: url('../Images/anniesprattunsplashhorizon.jpg');
+    
+    
+  }
+
+  .contactus {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f4f9e9;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #153243;
+    width: 90%;
+    border: 1px solid #f4f9e9;
+    border-radius: .5rem;
+    overflow: auto;
+}
+
+.contactus h1 {
+    padding-top: 6vh;
+    font-size: 6vh;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Contact End */
+
+/* Reviews Start */
+
+section.reviewspg {
+    padding: 10px 20px;
+    height: auto;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background-image: url('../Images/anniesprattunsplashhorizon.jpg');
+    
+  }
+
+
+/* Reviews End */
+
+/* Footer */
+
+.footer {
+    color: #f4f9e9;
+	background-color: #153243;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+	text-align: center;
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	height: 9rem;
+    flex-direction: column;
+	font-family: 'Poppins', sans-serif;
+} 
+
+.reviewsfooter {
+    display: none;
+}
+
+.social {
+	display: inline-block;
+    font-size: 175%;
+    margin: 10px 10px 5px 10px;
+	color: #f4f9e9;
+}
+.phone {
+	display: inline-block;
+    font-size: 100%;
+    margin-top: 5px;
+}
+.address {
+    display: inline-block;
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+   
+/* Media Queries */
+
+
+@media screen and (max-width: 700px) {
+
+    .main {
+        background-image: url('../Images/anniesprattunsplash.jpg');
+    }
+
+
+    section.content {
+        padding: 10px 20px;
+          height: auto;
+        font-family: 'Playfair Display', serif;
+        width: 100%;
+        text-align: left;
+        color: #153243;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../Images/anniesprattunsplash.jpg');
+      }
+
+    .hamburgermenu {
+        display: none;
+}
+
+
+#top-nav {
+    display: flex;
+    justify-content: space-evenly;
+    background: #153243;
+    background-size: cover;
+    top: 0;
+    height: 50px;
+    z-index: 1;
+}
+  
+   .top-nav a {
+      padding: 1.25rem 0.5rem 1.50rem 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      max-width: 140px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      color: #f4f9e9;
+   }
+    .top-nav a:hover {
+        color: #d0a3bf;
+      }
+    
+
+#fullscreenyelp {
+    display: none;
+}
+
+section.reviewspg {
+    height: 300px;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-image: url('../Images/anniesprattunsplashhorizon.jpg');
+    
+  }
+
+
+#fullscreengoogle {
+    height: 200px;
+    top: 0;
+}
+
+
+  @media screen and (max-width: 800px) {
+	.about-images {
+	  flex-direction: column;
+	}
+	.about-image-one {
+		width: 80%;
+	}
+	.about-image-two {
+		width: 80%;
+	}
+	.about-image-three {
+		width: 80%;
+		margin-bottom: 50px;
+	}
+	
+  }}
